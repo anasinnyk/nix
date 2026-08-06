@@ -8,23 +8,44 @@
         button-rounding = "lg";
         exclusive = true;
         scale = 0.5;
-        layout = [{
-          left = [ "niri-workspaces" "media" ];
-          center = [ ];
-          monitor = "*";
-          right = [ "dashboard" ];
-          show = true;
-        }];
+        layout = [
+          {
+            left = [
+              "niri-workspaces"
+              "media"
+            ];
+            center = [ ];
+            monitor = "*";
+            right = [ "dashboard" ];
+            show = true;
+          }
+        ];
         location = "bottom";
       };
-      general = { font-mono = "Fira Code"; font-sans = "Fira Code"; };
+      general = {
+        font-mono = "Fira Code";
+        font-sans = "Fira Code";
+      };
       modules = {
-        battery = { label-show = false; };
-        bluetooth = { label-show = false; };
-        clock = { label-show = false; };
-        microphone = { label-show = false; };
-        network = { label-show = false; };
-        volume = { label-show = false; }; };
+        battery = {
+          label-show = false;
+        };
+        bluetooth = {
+          label-show = false;
+        };
+        clock = {
+          label-show = false;
+        };
+        microphone = {
+          label-show = false;
+        };
+        network = {
+          label-show = false;
+        };
+        volume = {
+          label-show = false;
+        };
+      };
       styling = {
         palette = {
           bg = "#282828";

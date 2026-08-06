@@ -10,7 +10,12 @@
         appearance.nerd_font_variant = "mono";
         signature.enabled = true;
         sources = {
-          default = [ "lsp" "path" "snippets" "buffer" ];
+          default = [
+            "lsp"
+            "path"
+            "snippets"
+            "buffer"
+          ];
           providers = {
             lsp = {
               module = "blink.cmp.sources.lsp";

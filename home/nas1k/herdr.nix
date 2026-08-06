@@ -6,7 +6,7 @@
       keys = {
         prefix = "ctrl+space";
       };
-        theme.name = "gruvbox";
-      };
+      theme.name = "gruvbox";
+    };
   };
 }

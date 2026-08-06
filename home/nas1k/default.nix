@@ -14,6 +14,7 @@
     ./fish.nix
     ./pi.nix
     ./swaylock.nix
+    ./utils.nix
   ];
 
   home = {

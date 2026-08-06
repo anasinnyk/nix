@@ -35,14 +35,9 @@
             vim_diff_opts.ctxlen.__raw = "vim.o.scrolloff";
 
             mappings.i = {
-              "<C-cr>" =
-                "require('telescope-undo.actions').yank_additions";
-
-              "<S-cr>" =
-                "require('telescope-undo.actions').yank_deletions";
-
-              "<cr>" =
-                "require('telescope-undo.actions').restore";
+              "<C-cr>" = "require('telescope-undo.actions').yank_additions";
+              "<S-cr>" = "require('telescope-undo.actions').yank_deletions";
+              "<cr>" = "require('telescope-undo.actions').restore";
             };
           };
         };
@@ -91,11 +86,9 @@
             };
 
             i = {
-              "<C-j>".__raw =
-                "require('telescope.actions').cycle_history_next";
+              "<C-j>".__raw = "require('telescope.actions').cycle_history_next";
 
-              "<C-k>".__raw =
-                "require('telescope.actions').cycle_history_prev";
+              "<C-k>".__raw = "require('telescope.actions').cycle_history_prev";
 
               "<CR>".__raw = ''
                 function(prompt_bufnr)
@@ -130,14 +123,11 @@
                   + require("telescope.actions").open_qflist
               '';
 
-              "<C-S-d>".__raw =
-                "require('telescope.actions').delete_buffer";
+              "<C-S-d>".__raw = "require('telescope.actions').delete_buffer";
 
-              "<C-s>".__raw =
-                "require('telescope.actions').cycle_previewers_next";
+              "<C-s>".__raw = "require('telescope.actions').cycle_previewers_next";
 
-              "<C-a>".__raw =
-                "require('telescope.actions').cycle_previewers_prev";
+              "<C-a>".__raw = "require('telescope.actions').cycle_previewers_prev";
 
               "<M-c>".__raw = ''
                 function(prompt_bufnr)

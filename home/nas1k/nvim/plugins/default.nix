@@ -14,5 +14,6 @@
     ./gitsigns.nix
     ./telescope.nix
     ./grug-far.nix
+    ./kulala.nix
   ];
 }

@@ -1,0 +1,32 @@
+{ pkgs, ... }: {
+  home.packages = with pkgs; [
+    bat
+    fzf
+    disfetch
+    lolcat
+    cowsay
+    onefetch
+    jq
+    yq-go
+    eza
+    whois
+    tldr
+    unzip
+    httpie
+    scc
+    duf
+    procs
+    sd
+    tre
+    doggo
+    browsh
+    nh
+    buku
+    cmus
+    khal
+    mutt
+    taskwarrior3
+    navi
+    devenv
+  ];
+}
