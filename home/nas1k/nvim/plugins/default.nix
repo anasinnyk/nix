@@ -7,5 +7,12 @@
     ./mini.nix
     ./treesitter.nix
     ./lazygit.nix
+    ./octo.nix
+    ./rustaceanvim.nix
+    ./conform.nix
+    ./gitblame.nix
+    ./gitsigns.nix
+    ./telescope.nix
+    ./grug-far.nix
   ];
 }

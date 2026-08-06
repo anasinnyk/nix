@@ -13,8 +13,16 @@
         };
       };
       switch-events = {
-        lid-close.spawn = [ "bash" "-c" "[[ $(niri msg outputs | grep -E \"^Output [^(]*\\(([^)]*)\\)$\" | wc -l) -gt 1 ]] && niri msg output off eDP-1" ];
-        lid-open.spawn = [ "bash" "-c" "[[ $(niri msg outputs | grep -E \"^Output [^(]*\\(([^)]*)\\)$\" | wc -l) -gt 1 ]] && niri msg output on eDP-1" ];
+        lid-close.spawn = [
+          "bash"
+          "-c"
+          "[[ $(niri msg outputs | grep -E \"^Output [^(]*\\(([^)]*)\\)$\" | wc -l) -gt 1 ]] && niri msg output off eDP-1"
+        ];
+        lid-open.spawn = [
+          "bash"
+          "-c"
+          "[[ $(niri msg outputs | grep -E \"^Output [^(]*\\(([^)]*)\\)$\" | wc -l) -gt 1 ]] && niri msg output on eDP-1"
+        ];
       };
       binds = {
         "Mod+Return".spawn = [ "ghostty" ];
@@ -37,9 +45,33 @@
         "Mod+F".maximize-column = [ ];
         "Mod+Shift+F".fullscreen-window = [ ];
 
-        "XF86AudioRaiseVolume".spawn = [ "wpctl set-volume -l 1.0 @DEFAULT_AUDIO_SINK@ 5%+" ];
-        "XF86AudioLowerVolume".spawn = [ "wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-" ];
-        "XF86AudioMute".spawn = [ "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle" ];
+        "XF86AudioRaiseVolume".spawn = [
+          "wpctl"
+          "set-volume"
+          "-l"
+          "1.0"
+          "@DEFAULT_AUDIO_SINK@"
+          "5%+"
+        ];
+        "XF86AudioLowerVolume".spawn = [
+          "wpctl"
+          "set-volume"
+          "-l"
+          "1.0"
+          "@DEFAULT_AUDIO_SINK@"
+          "5%-"
+        ];
+        "XF86AudioMute".spawn = [
+          "wpctl"
+          "set-mute"
+          "@DEFAULT_AUDIO_SINK@"
+          "toggle"
+        ];
+
+        "Mod+Shift+Q".spawn = [
+          "swaylock"
+          "-f"
+        ];
       };
     };
   };

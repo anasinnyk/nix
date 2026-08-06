@@ -131,7 +131,7 @@
   security = {
     rtkit.enable = true;
     polkit.enable = true;
-    pam.services.hyprlock = {};
+    pam.services.swaylock = {};
   };
 
   # Open ports in the firewall.

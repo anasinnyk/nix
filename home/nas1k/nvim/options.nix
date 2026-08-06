@@ -50,6 +50,23 @@
           end
         '';
       }
+      {
+        event = [ "FileType" ];
+        pattern = [ "grug-far" ];
+
+        callback.__raw = ''
+          function(event)
+            vim.keymap.set(
+              "n",
+              "<Esc>",
+              "<Cmd>stopinsert | bd!<CR>",
+              {
+                buffer = event.buf,
+              }
+            )
+          end
+        '';
+      }
     ];
     plugins.web-devicons.enable = true;
 }

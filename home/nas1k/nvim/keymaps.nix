@@ -92,5 +92,99 @@
           end
         '';
       }
+      { 
+        mode = "n";
+        key = "<leader>gg";
+        action = "<cmd>LazyGit<cr>";
+        options.desc = "[G]o to Lazy[G]it";
+      }
+      {
+        mode ="n";
+        key = "<leader>gO";
+        action = "<cmd>Octo pr list<cr>";
+        options.desc = "[G]it [O]cto PR";
+      }
+      {
+        mode ="n";
+        key = "<leader>gP";
+        action ="<cmd>Octo pr view<cr>";
+        options.desc = "[G]it [P]ull Request";
+      }
+      {
+        mode ="n";
+        key = "<leader>gC";
+        action = "<cmd>Octo pr create draft<cr>";
+        options.desc = "[G]it Pull Request [C]reate";
+      }
+      {
+        mode ="n";
+        key = "<leader>gR";
+        action = "<cmd>Octo pr ready<cr>";
+        options.desc = "[G]it Pull Request [R]eady";
+      }
+      {
+        mode = "n";
+        key = "<leader>tf";
+        action.__raw = ''
+          function()
+            local bufnr = vim.api.nvim_get_current_buf()
+
+            vim.b[bufnr].disable_autoformat =
+              not vim.b[bufnr].disable_autoformat
+          end
+        '';
+        options.desc = "[T]oggle LSP [F]ormat buffer";
+      }
+
+      {
+        mode = "n";
+        key = "<leader>tF";
+        action.__raw = ''
+          function()
+            vim.g.disable_autoformat =
+              not vim.g.disable_autoformat
+          end
+        '';
+        options.desc = "[T]oggle LSP [F]ormat global";
+      }
+      {
+        mode = "n";
+        key = "<leader>tb";
+        action = "<cmd>GitBlameToggle<cr>";
+        options.desc = "[T]oggle Git [B]lame";
+      }
+      {
+        mode = "n";
+        key = "<leader>go";
+        action = "<cmd>GitBlameOpenCommitURL<cr>";
+        options.desc = "[G]it [O]pen Commit URL";
+      }
+      {
+        mode = [ "n" "v" ];
+        key = "<leader>fr";
+
+        action.__raw = ''
+          function()
+            local ext
+
+            if vim.bo.buftype == "" then
+              ext = vim.fn.expand("%:e")
+            end
+
+            require("grug-far").open({
+              transient = true,
+              prefills = {
+                filesFilter =
+                  ext ~= nil
+                  and ext ~= ""
+                  and ("*." .. ext)
+                  or nil,
+              },
+            })
+          end
+        '';
+
+        options.desc = "Search and Replace";
+      }
     ];
 }

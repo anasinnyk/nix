@@ -13,6 +13,7 @@
     ./herdr.nix
     ./fish.nix
     ./pi.nix
+    ./swaylock.nix
   ];
 
   home = {
