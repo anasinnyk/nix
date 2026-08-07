@@ -28,5 +28,6 @@
     taskwarrior3
     navi
     devenv
+    wl-clipboard
   ];
 }

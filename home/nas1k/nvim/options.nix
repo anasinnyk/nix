@@ -6,6 +6,7 @@
   };
   clipboard.providers.wl-copy.enable = true;
   opts = {
+    clipboard = "unnamedplus";
     number = true;
     relativenumber = true;
     mouse = "a";

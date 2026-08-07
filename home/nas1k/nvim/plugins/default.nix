@@ -15,5 +15,6 @@
     ./telescope.nix
     ./grug-far.nix
     ./kulala.nix
+    ./haskell-tools.nix
   ];
 }

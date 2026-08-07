@@ -15,6 +15,7 @@
     ./pi.nix
     ./swaylock.nix
     ./utils.nix
+    ./vicinae.nix
   ];
 
   home = {
