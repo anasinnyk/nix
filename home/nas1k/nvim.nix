@@ -17,6 +17,7 @@
 
     imports = [
       ./nvim/options.nix
+      ./nvim/colorschemes.nix
       ./nvim/keymaps.nix
       ./nvim/lsp.nix
       ./nvim/plugins

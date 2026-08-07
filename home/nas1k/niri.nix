@@ -13,6 +13,38 @@
           };
         };
       };
+      _children = [
+        {
+          output = {
+            _args = [ "DP-2" ];
+            scale = 1.5;
+            position._props = {
+              x = 0;
+              y = 0;
+            };
+          };
+        }
+        {
+          output = {
+            _args = [ "DP-1" ];
+            scale = 1.5;
+            position._props = {
+              x = 2560;
+              y = 0;
+            };
+          };
+        }
+        {
+          output = {
+            _args = [ "eDP-1" ];
+            scale = 1.0;
+            position._props = {
+              x = 5120;
+              y = 0;
+            };
+          };
+        }
+      ];
       switch-events = {
         lid-close.spawn = [
           "bash"

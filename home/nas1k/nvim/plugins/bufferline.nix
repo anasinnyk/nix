@@ -26,13 +26,13 @@
     }
     {
       mode = "n";
-      key = "<A-Char-60>"; # <
+      key = "<A-S-,>"; # <
       action = "<Cmd>BufferLineMovePrev<CR>";
       options.desc = "Move buffer to left";
     }
     {
       mode = "n";
-      key = "<A-Char-62>"; # >
+      key = "<A-S-.>"; # >
       action = "<Cmd>BufferLineMoveNext<CR>";
       options.desc = "Move buffer to right";
     }

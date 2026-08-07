@@ -3,7 +3,10 @@
 {
   imports = [ ./hardware-configuration.nix ];
 
-  nix.settings.experimental-features = [ "nix-command" "flakes" ];
+  nix.settings.experimental-features = [
+    "nix-command"
+    "flakes"
+  ];
 
   boot = {
     loader = {
@@ -38,7 +41,6 @@
   #   useXkbConfig = true; # use xkb.options in tty.
   # };
 
-
   # Configure keymap in X11
   # services.xserver.xkb.layout = "us";
   # services.xserver.xkb.options = "eurosign:e,caps:escape";
@@ -59,8 +61,11 @@
 
   users.users.nas1k = {
     isNormalUser = true;
-    extraGroups = [ "wheel" "networkmanager" ];
-    packages = [];
+    extraGroups = [
+      "wheel"
+      "networkmanager"
+    ];
+    packages = [ ];
   };
 
   # List packages installed in system profile.
@@ -131,7 +136,7 @@
   security = {
     rtkit.enable = true;
     polkit.enable = true;
-    pam.services.swaylock = {};
+    pam.services.swaylock = { };
   };
 
   # Open ports in the firewall.
@@ -165,4 +170,3 @@
   system.stateVersion = "26.05"; # Did you read the comment?
 
 }
-
