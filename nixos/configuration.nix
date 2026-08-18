@@ -114,6 +114,44 @@
         enable = true;
         support32Bit = true;
       };
+      extraConfig.pipewire."99-dell-stereo" = {
+        "context.modules" = [
+          {
+            name = "libpipewire-module-combine-stream";
+            args = {
+              "combine.mode" = "sink";
+              "node.name" = "dell_stereo_sink";
+              "node.description" = "Dell Monitors Stereo Pair";
+              "combine.props" = {
+                "audio.position" = [
+                  "FL"
+                  "FR"
+                ];
+              };
+              "stream.rules" = [
+                {
+                  matches = [ { "node.name" = "alsa_output.pci-0000_03_00.1.pro-output-3"; } ];
+                  actions = {
+                    "create-stream" = {
+                      "audio.position" = [ "FL" ];
+                      "combine.audio.position" = [ "FL" ];
+                    };
+                  };
+                }
+                {
+                  matches = [ { "node.name" = "alsa_output.pci-0000_03_00.1.pro-output-8"; } ];
+                  actions = {
+                    "create-stream" = {
+                      "audio.position" = [ "FR" ];
+                      "combine.audio.position" = [ "FR" ];
+                    };
+                  };
+                }
+              ];
+            };
+          }
+        ];
+      };
     };
     logind.settings.Login = {
       HandleLidSwitch = "ignore";

@@ -105,18 +105,6 @@
           };
         };
       };
-      rust_analyzer = {
-        enable = true;
-        config = {
-          cmd = [ "rust-analyzer" ];
-          filetypes = [ "rust" ];
-          root_markers = [ "Cargo.toml" ];
-          settings.rust_analizer = {
-            cargo.allFeatures = true;
-            completion.snippets = "add_parenthesis";
-          };
-        };
-      };
     };
   };
 }

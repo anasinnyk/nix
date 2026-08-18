@@ -16,5 +16,9 @@
     ./grug-far.nix
     ./kulala.nix
     ./haskell-tools.nix
+    ./indent-blankline.nix
+    ./dap.nix
+    ./dadbod.nix
+    ./hurl.nix
   ];
 }

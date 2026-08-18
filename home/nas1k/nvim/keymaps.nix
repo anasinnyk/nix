@@ -1,3 +1,5 @@
+{ lib, ... }:
+
 {
   keymaps = [
     {
@@ -266,6 +268,30 @@
       '';
 
       options.desc = "Search and Replace";
+    }
+    {
+      mode = "n";
+      key = "<leader>/";
+      action = "gcc";
+      options = {
+        desc = "(Un)Comment current line(s)";
+        remap = true;
+      };
+    }
+    {
+      mode = "x";
+      key = "<leader>/";
+      action = "gc";
+      options = {
+        desc = "(Un)Comment selection";
+        remap = true;
+      };
+    }
+    {
+      mode = "n";
+      key = "gd";
+      action = lib.nixvim.mkRaw "vim.lsp.buf.definition";
+      options.desc = "LSP: Go to definition";
     }
   ];
 }
